@@ -1,0 +1,12 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: #eee;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
