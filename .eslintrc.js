@@ -54,5 +54,7 @@ module.exports = {
     "object-curly-newline": "off",
     "react/forbid-prop-types": "off",
     "react/require-default-props": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
   },
 };

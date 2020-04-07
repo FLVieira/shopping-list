@@ -6,7 +6,7 @@ import './styles.css';
 
 export default function Header() {
   return (
-    <AppBar position="static" color="default" color="primary">
+    <AppBar position="static" color="primary">
       <div className="header">
         <Link to="/list">
           <p className="header-title">Shopping List</p>
