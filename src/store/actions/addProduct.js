@@ -1,4 +1,4 @@
-export function playVideo(product, list) {
+export function addProduct(product, list) {
   return {
     type: 'ADD_PRODUCT',
     product,

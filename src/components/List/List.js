@@ -11,11 +11,11 @@ export default function List(props) {
   return (
     <CustomCard
       containerClass="list-container"
-      footer={<ListFooter />}
+      footer={<ListFooter total={props.total} />}
       link="/list"
     >
       <div>
-        <p className="title">Month</p>
+        <p className="title">{props.list}</p>
         <div className="list-card-body">
           <ListItem icon={faShoppingBasket} text="1 item left" />
           <ListItem icon={faCheck} text="2 items bought" />

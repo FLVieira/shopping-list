@@ -1,16 +1,20 @@
 const INITIAL_STATE = {
-  product: null,
+  products: [],
   list: false,
 };
 
-export default function searchVideo(state = INITIAL_STATE, action) {
+export default function addProduct(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'ADD_PRODUCT': {
       const newState = { ...state };
-      newState.product = action.product;
+      newState.products = [...state.products, { ...action.product, total: getItemTotal(action.product) }];
       newState.list = action.list;
       return newState;
     }
     default: return state;
   }
+}
+
+function getItemTotal(product) {
+  return product.price * product.quantity;
 }

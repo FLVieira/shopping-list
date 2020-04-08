@@ -4,23 +4,23 @@ import { Checkbox, Typography } from '@material-ui/core';
 import CustomCard from '../../components/CustomCard';
 import ListItemFooter from './ListItemFooter';
 
-export default function ListItem() {
+export default function ListItem({ product }) {
   return (
     <CustomCard
       link="#"
       image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG"
       containerClass="list-item"
-      footer={<ListItemFooter />}
+      footer={<ListItemFooter total={product.total} />}
     >
       <div>
         <div className="list-item-header">
           <Typography variant="subtitle1" component="h2">
-            Coffe
+            {product.name}
           </Typography>
           <Checkbox />
         </div>
-        <Typography component="p">1 Unity</Typography>
-        <Typography component="p">R$10.00</Typography>
+        <Typography component="p">{product.quantity} {product.unit}</Typography>
+        <Typography component="p">{product.price}</Typography>
       </div>
     </CustomCard>
   );
